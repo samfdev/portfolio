@@ -12,10 +12,9 @@
         <nav>
             <img src="res/logo.svg" alt="Flat Logo" class="logo">
             <ul class="nav-items">
-                <li class="nav-item"><a href="">About Me</a></li>
-                <li class="nav-item"><a href="">My Work</a></li>
-                <li class="nav-item"><a href="">Pricing</a></li>
-                <li class="nav-item special"><a href="">Contact</a></li>
+                <li class="nav-item"><a id="abt">About Me</a></li>
+                <li class="nav-item"><a id="work">My Work</a></li>
+                <li class="nav-item special"><a id="contact">Contact</a></li>
             </ul>
         </nav>
         <header class="landing">
@@ -27,7 +26,7 @@
             </div>
             <ul class="socials">
                 <li class="social"><a target="_blank" href="https://twitter.com/samfdev"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="social"><a` target="_blank" href="https://github.com/samfdev"><i class="fa-brands fa-github"></i></a></li>
+                <li class="social"><a target="_blank" href="https://github.com/samfdev"><i class="fa-brands fa-github"></i></a></li>
                 <li class="social"><a target="_blank" href="#"><i class="fa-brands fa-discord"></i></a></li>
                 <li class="social"><a target="_blank" href="https://www.instagram.com/samuel.b.foster/"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
@@ -35,21 +34,60 @@
         <section class="about">
             <h1>About Me</h1>
             <section class="hr"></section>
-            <p>My name is Sam Foster and I'm a <span id="age">15</span> year old developer and designer and I've been "programming" for the past 6 years! I started out with Scratch, a block coding platform, and eventually moved on to high-level languages like Lua and Python. I stuck with those for a while, but a few years ago, I learned Javascript to aid in web development. Today, I prefer lower-level languages like Rust and C. My dream is to eventually create an operating system from scratch, but I've got a lot to learn before then!</p>
+            <p>My name is Sam Foster and I'm a <span id="age">15</span> year old developer and designer and I've been doing some king of computer science for the past 6 years! I started out with Scratch, a block coding platform, and eventually moved on to high-level languages like Lua and Python. I stuck with those for a while, but a few years ago, I learned Javascript to aid in web development. Today, I prefer system-level languages like Rust and C. My dream is to eventually create an operating system from scratch, but I've got a lot to learn before then!</p>
         </section>
-        <!-- <section class="work">
+        <section class="work">
             <h1>My Work</h1>
+            <h3>Note that not all work below is finished. I plan to get everything done before my sophomore year.</h3>
+            <section class="work-wrapper">
+                <work-example name="Buzz" lang="Rust" href="#"></work-example>
+                <work-example name="Portfolio" lang="HTML/CSS/JS" href="https://www.samf.cc"></work-example>
+                <work-example name="Goose" lang="Rust" href="#"></work-example>
+                <work-example name="Bookworm" lang="HTML/CSS/JS" href="#"></work-example>
+                <work-example name="CLGui" lang="C" href="#"></work-example>
+                <work-example name="Solve" lang="C, Rust" href="#"></work-example>
+                <work-example name="scat" lang="Rust" href="#"></work-example>
+                <work-example name="JFF" lang="Rust" href="#"></work-example>
+                <work-example name="sense1.us" for="Client" lang="NodeJS" href="https://www.sense1.us"></work-example>
+            </section>
         </section>
-        <section class="pricing">
-            <ul class="options">
-                <li id="mobile" class="option"><div class="check-wrapper"><input type="checkbox" checked="true"></div>Development<span>$10.00</span></li>
-                <li id="mobile" class="option"><div class="check-wrapper"><input type="checkbox" checked="true"></div>Mobile View<span>$2.50</span></li>
-                <li id="setup" class="option"><div class="check-wrapper"><input type="checkbox"></div>Setup<span>$5.00</span></li>
-                <li id="manage" class="option"><div class="check-wrapper"><input type="checkbox"></div>Managment<span>$5.00</span></li>
+        <section class="contact">
+            <h1>Contact</h1>
+            <ul class="contacts">
+                <li class="contact"><i class="fa-brands fa-discord"></i><a target="_blank">samf#0001</a></li>
+                <li class="contact"><i class="fa-brands fa-twitter"></i><a target="_blank" href="https://twitter.com/samfdev">@samfdev</a></li>
+                <li class="contact"><i class="fas fa-paper-plane"></i><a target="_blank" href="mailto:business@samf.cc">business@samf.cc</a></li>
             </ul>
-            <h1 class="price">$<span>12.50</span>/Hour</h1>
-        </section> -->
+        </section>
+        <footer>
+            <ul class="footer-list">
+                <h2>Technologies</h2>
+                <li class="footer-item"><a href="https://fonts.google.com/">Google Fonts</a></li>
+                <li class="footer-item"><a href="http://netlify.app/">Netlify</a></li>
+                <li class="footer-item"><a href="https://fontawesome.com/">Font Awesome</a></li>
+                <li class="footer-item"><a href="https://www.pixlr.com/e/">Pixlr Editor</a></li>
+            </ul>
+            <ul class="footer-list">
+                <h2>Contact</h2>
+                <li class="footer-item"><a href="https://twitter.com/samfdev">Twitter</a></li>
+                <li class="footer-item"><a href="mailto:business@samf.cc">Email</a></li>
+            </ul>
+            <ul class="footer-list">
+                <h2>Pages</h2>
+                <li class="footer-item"><a href="">Home</a></li>
+                <li class="footer-item"><a href="">Webtools</a></li>
+                <li class="footer-item"><a href="">Buzz</a></li>
+                <li class="footer-item"><a href="">JFF</a></li>
+            </ul>
+            <ul class="footer-list">
+                <h2>Socials</h2>
+                <li class="footer-item"><a href="https://twitter.com/samfdev">Twitter</a></li>
+                <li class="footer-item"><a href="https://www.instagram.com/samuel.b.foster/">Instagram</a></li>
+                <li class="footer-item"><a href="https://github.com/samfdev">Github</a></li>
+            </ul>
+        </footer>
 
+        <script src="src/elements.js"></script>
         <script src="src/app.js"></script>
     </body>
 </html>

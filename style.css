@@ -6,6 +6,7 @@ a { text-decoration: none; }
 :root {
     --bg-dark: #13151b;
     --bg-light: #1E1E26;
+    --bg-lighter: #2a2a34;
     --hl-dark: #EA3862;
     --hl-light: #ff5151;
     --white: #eceae4;
@@ -18,17 +19,18 @@ nav {
     justify-content: space-around;
     position: fixed;
     top: 0; left: 0;
-    width: 100vw; height: 7vh;
+    width: 100vw; height: 70px;
     z-index: 99999;
     backdrop-filter: blur(7px);
     transition: background-color 0.5s;
 }
 
-img.logo { height: 3vh; }
+img.logo { height: 35px; }
 
 ul.nav-items { display: flex; list-style: none; margin-left: 20vh; }
-li.nav-item { padding: 0 1vw; margin: 0 1.5vw; }
-li.nav-item a { color: var(--white); font-size: 2vh; }
+li.nav-item { padding: 4px 1vw; margin: 0 1.5vw; }
+li.nav-item a { color: var(--white); font-size: 20px; line-height: 25px; transition: color 0.2s; }
+li.nav-item:hover a { color: var(--hl-light); }
 li.nav-item.special { border: 3px var(--hl-light) solid; border-radius: 0.4ch; }
 
 header.landing {
@@ -88,24 +90,78 @@ section.about h1 { text-align: center; font-size: 6vh; padding: 20px 0 10px;  co
 section.about p { font-size: 2.5vh; text-align: justify; padding: 0 10vw 50px; }
 span#age { font-family: 'JetBrains Mono', monospace; }
 
-section.pricing { display: flex; align-items: center; justify-content: space-around; }
+section.work { text-align: center; background-color: var(--bg-light); color: var(--white); padding-bottom: 3vh; }
+section.work h1 { padding: 10px; font-size: 8vh; }
+section.work h3 { text-align: center; line-height: 3.2vh; font-size: 3vh; padding: 0px 0 3vh;  color: var(--white); opacity: 0.25; }
 
-ul.options { list-style: none;}
-li.option { display: flex; align-items: center; font-size: 4vh; }
-li.option span { margin: 0 20px; color: var(--hl-light); }
-div.check-wrapper {
-    margin: 10px;
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    background-color: var(--hl-dark);
+section.work-wrapper { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+
+work-example:hover { transform: scale(1.04); z-index: 11; }
+work-example {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+    width: 30vw;
+    aspect-ratio: 5/2;
+    border-radius: 8px;
+    box-shadow: 0 0 3vh var(--bg-dark);
+    background-color: var(--bg-lighter);
+    z-index: 10;
+    transition: 0.5s cubic-bezier(0.25, 1, 0.52, 1);
 }
 
-div.check-wrapper input { width: 100%; height: 100%; opacity: 0.01; }
+section.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--hl-light);
+    min-height: 25vh;
+}
+
+section.contact h1 { font-size: 10vh; color: var(--bg-light); line-height: 10vh; }
+ul.contacts { list-style: none; display: flex; }
+li.contact { margin: 0 2vw; }
+li.contact i { color: var(--bg-light); font-size: 4vh; margin: 0.5vw; line-height: 4vh; }
+li.contact a { color: var(--bg-light); font-size: 4vh; }
+
+footer {
+    padding: 2vh 0 3vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bg-dark);
+}
+
+ul.footer-list { list-style: none; }
+ul.footer-list h2 { font-size: 2.5vh; color: var(--hl-dark); }
+li.footer-item a { color: var(--white); text-decoration: none; font-size: 1.75vh; }
+li.footer-item a:hover { text-decoration: underline; }
+
+@media (max-aspect-ratio: 11/8) {
+    work-example { width: 45vw; margin-bottom: 2vw; }
+}
+
+@media (max-aspect-ratio: 5/3) {
+    section.contact { flex-direction: column; justify-content: center; }
+    ul.nav-items { margin: 0; }
+    li.contact a, li.contact i { font-size: 3vw; line-height: 3vw; }
+}
 
 @media (max-aspect-ratio: 5/6) {
+    li.nav-item a { font-size: 4vw; line-height: 4vw; padding: 0 1vw; }
     div.text-wrapper { margin-bottom: 40vh; }
     h1.name { font-size: 14vw; text-align: center; }
     h3.title { font-size: 5vw; width: 100%; text-align: center; transform: translateY(1.5ch); }
     img.render { bottom: -1vh; }
     section.about p { font-size: 2vh; }
+    work-example { width: 80vw; margin-bottom: 5vw; }
+    section.contact { padding: 5vh 0; }
+    section.contact h1 { font-size: 8vh; }
+    ul.contacts { display: block; text-align: center; }
+    li.contact a, li.contact i { font-size: 3.5vh; line-height: 3.5vh; margin: 1vh 0; }
+    ul.footer-list h2 { font-size: 4vw; }
+    li.footer-item a { font-size: calc(1vh + 1vw); }
 }
