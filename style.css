@@ -124,9 +124,9 @@ section.contact {
 
 section.contact h1 { font-size: 10vh; color: var(--bg-light); line-height: 10vh; }
 ul.contacts { list-style: none; display: flex; }
-li.contact { margin: 0 2vw; }
-li.contact i { color: var(--bg-light); font-size: 4vh; margin: 0.5vw; line-height: 4vh; }
-li.contact a { color: var(--bg-light); font-size: 4vh; }
+li.contact { margin: 0 1.5vw; }
+li.contact i { color: var(--bg-light); font-size: 3.5vh; margin: 0.5vw; line-height: 3.5vh; }
+li.contact a { color: var(--bg-light); font-size: 3.5vh; }
 
 footer {
     padding: 2vh 0 3vh;
